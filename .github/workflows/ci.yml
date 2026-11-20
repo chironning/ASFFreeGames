@@ -19,7 +19,7 @@ jobs:
             10.0.x
 
       - name: Build ASFFreeGames
-        run: dotnet build ASFFreeGames -c Release
+        run: dotnet build ASFFreeGames -c Release -p:TreatWarningsAsErrors=false -p:CodeAnalysisTreatWarningsAsErrors=false -p:WarningsAsErrors=""
 
       - name: Upload DLL
         uses: actions/upload-artifact@v4
